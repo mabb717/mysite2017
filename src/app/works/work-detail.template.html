@@ -1,0 +1,11 @@
+<div *ngIf="work">
+	<!-- <ul class="work-thumbs">
+		<li *ngFor="let image of work-detail.images">
+			<img src="../assets/{{image}}" />
+		</li>
+	</ul> -->
+	<h1>{{work.name}}</h1>
+	<iframe src="{{work.videoSrc}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<p>{{work-detail.description}}</p>
+
+</div>

@@ -1,0 +1,13 @@
+{
+  "id": "work01",
+  "name": "Work One",
+  "date": "April 2017",
+  "description": "A great piece I did",
+  "images": [
+    "square5.png",
+    "square6.png",
+    "square7.png",
+    "square8.png"
+  ],
+  "videoSrc": "https://player.vimeo.com/video/180495068"
+}
