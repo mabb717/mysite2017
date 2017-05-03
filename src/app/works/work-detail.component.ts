@@ -1,6 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+// import 'rxjs/add/operator/switchMap';
+import {Component} from '@angular/core';
+// import {ActivatedRoute, Params} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { RouterModule }   from '@angular/router';
+
+
+// import { Observable } from 'rxjs/Observable';
+import { Location }               from '@angular/common';
 
 import { Work } from './work';
 import { WorkService } from './work.service';
@@ -8,28 +14,24 @@ import { WorkService } from './work.service';
 
 
 @Component({
-	selector: 'app-work-detail',
+	selector: 'work-detail',
 	templateUrl: './work-detail.template.html',
 	styleUrls: ['./work-detail.component.css'],
 })
-export class WorkDetailComponent implements OnInit{
-	private sub: any;
-	private work: string[];
+export class WorkDetailComponent {
 
+	works: Array<Work>;
+	selectedWork: Work;
+	s: any;
+	work: any;
 
-	constructor(
-		private route: ActivatedRoute,
-		private workService: WorkService
-		) {}
+	constructor(public workService: WorkService, public router: Router){
+		this.works = this.workService.getWorks();
+		this.router = router;
+		let s = this.router.url;
+		let workId = s.substring(s.lastIndexOf("/") + 1)
+		this.work = this.works.filter(function(a){ return a.id == workId })[0]
 
-	//subscribe to WorkService on init to get desired work according to id
-	ngOnInit() {
-		this.sub = this.route.params.subscribe(params =>{
-			let id = params['id'];
-			this.workService.findWorkById(id).subscribe(work => this.work = work)
-		});
 	}
+
 }
-
-
-

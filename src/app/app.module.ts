@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
+
+import { AppRoutingModule, routableComponents } from './app-routing.module';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -8,24 +11,25 @@ import { DetailsComponent } from './details/details.component';
 import { WorksComponent } from './works/works.component';
 import { WorkDetailComponent } from './works/work-detail.component';
 import { WorkService } from './works/work.service';
-import { Work } from './works/work';
-import { AppRoutingModule, routableComponents } from './app-routing.module';
+import { SafePipe } from './safe.pipe';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    DetailsComponent,
-    WorksComponent,
-    WorkDetailComponent,
-    routableComponents
+  AppComponent,
+  HomeComponent,
+  DetailsComponent,
+  WorksComponent,
+  WorkDetailComponent,
+  routableComponents,
+  SafePipe
+
   ],
   imports: [
-    BrowserModule,
-    HttpModule,
-    AppRoutingModule
+  BrowserModule,
+  HttpModule,
+  AppRoutingModule
   ],
   providers: [
   WorkService

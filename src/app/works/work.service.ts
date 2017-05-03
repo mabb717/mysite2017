@@ -1,61 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Jsonp, URLSearchParams } from '@angular/http';
-import { Work } from './work'
-import 'rxjs/add/operator/map';
+import { Work } from '../works/work';
 
 @Injectable()
 export class WorkService {
-
-    constructor(private jsonp: Jsonp) { }
-
-    private worksUrl = '../data/works.json';
-
-    //get all my works by mapping entries to observable
-    findWorks() {
-        const endPoint = 'work.find'
-
-        return this.jsonp
-        .get(this.worksUrl + endPoint)
-        .map(response => <Work[]> response.json().work);
-    }
-
-    //get individual works as needed according to id
-    findWorkById(id: string){
-        const endPoint = 'work.get'
-
-        // Return response
-        return this.jsonp
-        .get(this.worksUrl + endPoint)
-        .map(response => {
-
-            console.log(response.json().work);
-            return  response.json().work
-        });
+    getWorks() {
+        return [
+        new Work( 'work01', 'Project One Yes One', '../assets/square1.png', '180495068', 'description 1'),
+        new Work( 'work02', 'Project Two Yes Two', '../assets/square2.png', '180495462', 'description 2'),
+        new Work( 'work03', 'Project Three Yes Three', '../assets/square3.png', '180495068', 'description 3'),
+        new Work( 'work04', 'Project Four Yes Four', '../assets/square4.png', '180495462', 'description 4')
+        ]
     }
 }
-// getWorks() {
-//     return [
-//     {
-//         "id": "work01",
-//         "name": "Project One Yes One",
-//         "image": "../assets/square1.png",
-//         "videoSrc": "https://player.vimeo.com/video/180495068"
-//     }, {
-//         "id": "work02",
-//         "name": "Project Two Yes Two",
-//         "image": "../assets/square2.png",
-//         "videoSrc": "https://player.vimeo.com/video/180495068"
-//     }, {
-//         "id": "work03",
-//         "name": "Project Three Yes Three",
-//         "image": "../assets/square3.png",
-//         "videoSrc": "https://player.vimeo.com/video/180495068"
-//     }, {
-//         "id": "work04",
-//         "name": "Project Four Yes Four",
-//         "image": "../assets/square4.png",
-//         "videoSrc": "https://player.vimeo.com/video/180495068"
-//     }
-//     ]
-// }
-

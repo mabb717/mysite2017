@@ -5,7 +5,8 @@
 		</li>
 	</ul> -->
 	<h1>{{work.name}}</h1>
-	<iframe src="{{work.videoSrc}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	<p>{{work-detail.description}}</p>
+	<p>{{work.description}}</p>
+
+	<iframe [src]="'https://player.vimeo.com/video/' + work.videoSrc | safe" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 </div>
