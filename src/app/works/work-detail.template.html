@@ -1,4 +1,4 @@
-<div *ngIf="work">
+<div *ngIf="work" class="container">
 	<!-- <ul class="work-thumbs">
 		<li *ngFor="let image of work-detail.images">
 			<img src="../assets/{{image}}" />
@@ -6,6 +6,7 @@
 	</ul> -->
 	<h1>{{work.name}}</h1>
 	<p>{{work.description}}</p>
+	<p>See the full post at <a href="http://qz.com/{{work.url}}" target="_blank">qz.com</a>.</p>
 	<div class="videoWrapper">
 		<iframe [src]="'https://player.vimeo.com/video/' + work.videoSrc | safe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</div>

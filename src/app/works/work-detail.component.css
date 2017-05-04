@@ -1,3 +1,10 @@
+.container {
+align-content:center;
+width:90%;
+margin: auto;
+max-width:720px;
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */

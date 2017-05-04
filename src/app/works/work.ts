@@ -2,5 +2,5 @@
 
 
 export class Work {
-  constructor(public id: string, public name: string, public image: string, public videoSrc: string, public description: string) { }
+  constructor(public id: string, public name: string, public image: string, public videoSrc: string, public description: string, public url: string) { }
 }

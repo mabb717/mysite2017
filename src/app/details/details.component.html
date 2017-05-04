@@ -1,8 +1,17 @@
-<ul>
-  <li *ngFor="let detail of details">
-    {{detail.name}}
-  </li>
-</ul>
+<div id="outer">
+	<div *ngIf="detail" class="container">
+		<div class="image">
+			<img src="{{detail.img}}" />
+
+		</div>
+		<div class="text">
+			<p>{{detail.name}}</p>
+		</div>
+	</div>
+</div>
+<div class="social">
+	<a href="resume.pdf" target="_blank"><img src="{{detail.resume}}" /></a> <a href="https://twitter.com/michaeljtabb" target="_blank"><img src="{{detail.twitter}}" /></a> <a href="mailto:tabbxyz@gmail.com"><img src="{{detail.email}}" /></a> <a href="http://www.linkedin.com/in/michael-tabb-5707113a/" target="_blank"><img src="{{detail.linkedin}}" /></a>
+</div>
 <!-- <div *ngIf="details.length">
   <h3>You have {{details.length}} details</h3>
 </div> -->

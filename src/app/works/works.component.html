@@ -1,7 +1,9 @@
-<div *ngFor="let work of works">
+<div id="container">
+	<div *ngFor="let work of works" >
 		<a href="work/{{work.id}}">	
-<!-- 	<a [routerLink]="['/works', work.id]">
- -->		<img src="{{work.image}}" />
-		<h1>{{work.name}}</h1>
-	</a>
+	<!-- 	<a [routerLink]="['/works', work.id]">
+	-->		<img src="{{work.image}}" />
+			<h1>{{work.name}}</h1>
+		</a>
+	</div>
 </div>
