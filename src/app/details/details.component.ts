@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class DetailsComponent {
 
 	detail = { 
-		resume: '../assets/resume.svg',
+		github: '../assets/github.svg',
 		email: '../assets/email.svg',
 		twitter: '../assets/twitter.svg',
 		linkedin: '../assets/linkedin.svg',
-		img: '../assets/square1.png',
-		name: 'This is my back story...',
+		img: '../assets/me.png',
+		name: "Michael Tabb is a reporter-animator obsessed with science and the future. He's currently based in New York City, working as a video journalist for Quartz."
 
 	};
 

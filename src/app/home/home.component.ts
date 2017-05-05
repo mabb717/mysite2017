@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  home = '../assets/square10.png';
+  home = '../assets/astronaut.png';
 
 }
