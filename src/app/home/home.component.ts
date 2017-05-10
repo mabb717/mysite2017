@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   home = '../assets/astronaut2.png';
+	// works: Array<Work>;
 
 }

@@ -6,9 +6,10 @@
 	img {
 		display:block;
 		width: 90%;
-		max-width:600px;
+		max-width:505px;
 		margin: auto;
-		padding-top:2em;
+		padding-top:0em;
+		padding-right: .5em;
 		-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
 		-khtml-user-select: none; /* Konqueror HTML */
