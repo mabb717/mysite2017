@@ -12,3 +12,13 @@ a {text-decoration:none; color: #262626; }
 @media only screen and (min-width: 768px) {
     div{display:inline-block;width:30.23%;margin: auto; padding: 0 0 0 3.1%;}
 }
+
+
+.social {width:280px;
+	margin: .5em auto 1em auto;
+	display: block;
+}
+
+.social img  { height:2em; width:2em; display: inline-block; margin: 0 1em 0 1em;}
+
+.social img:hover {opacity:.6;}

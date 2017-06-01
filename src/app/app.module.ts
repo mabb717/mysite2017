@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -32,6 +32,7 @@ import { SafePipe } from './safe.pipe';
   AppRoutingModule
   ],
   providers: [
+  Title,
   WorkService
   ],
   bootstrap: [AppComponent]

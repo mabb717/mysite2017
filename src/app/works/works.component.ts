@@ -20,4 +20,13 @@ export class WorksComponent {
     this.selectedWork = work;
   }
 
+detail = { 
+    github: '../assets/github.svg',
+    vimeo: '../assets/vimeo.svg',
+    twitter: '../assets/twitter.svg',
+    linkedin: '../assets/linkedin.svg',
+    img: '../assets/me.png',
+    name: "Michael Tabb is a reporter-animator obsessed with science and the future. He's currently based in New York City, working as a video journalist for Quartz."
+
+  };  
 }

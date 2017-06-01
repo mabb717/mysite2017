@@ -5,15 +5,25 @@
 
 	img {
 		display:block;
-		width: 90%;
+		width: 85%;
 		max-width:505px;
 		margin: auto;
-		padding-top:0em;
-		padding-right: .5em;
-		-webkit-touch-callout: none; /* iOS Safari */
+		padding-top:1.25em;
+/*		padding-right: .5em;
+*/		-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
 		-khtml-user-select: none; /* Konqueror HTML */
 		-moz-user-select: none; /* Firefox */
 		-ms-user-select: none; /* Internet Explorer/Edge */
 		user-select: none; /* Non-prefixed version, currently
 	supported by Chrome and Opera */}
+
+
+.social {width:280px;
+	margin: 1em auto 1em auto;
+	display: block;
+}
+
+.social img  { height:2em; width:2em; display: inline-block; margin: 0 1em 0 1em; padding:0;}
+
+.social img:hover {opacity:.6;}
